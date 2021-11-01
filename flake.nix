@@ -32,7 +32,7 @@
       in
       rec {
         packages = {
-          zinc = pkgs.zinc;
+          zinc = pkgs.zinc.dependencyEnv;
         };
 
         # defaultApp = apps.zinc;
