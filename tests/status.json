@@ -1,0 +1,1988 @@
+{
+  "Jobs": {
+    "_control": {
+      "internal": null,
+      "type": "internal"
+    },
+    "_prometheus": {
+      "internal": null,
+      "type": "internal"
+    },
+    "backups": {
+      "push": {
+        "Replication": {
+          "StartAt": "2021-11-01T18:03:56.157969708-04:00",
+          "FinishAt": "0001-01-01T00:00:00Z",
+          "WaitReconnectSince": "0001-01-01T00:00:00Z",
+          "WaitReconnectUntil": "0001-01-01T00:00:00Z",
+          "WaitReconnectError": null,
+          "Attempts": [
+            {
+              "State": "done",
+              "StartAt": "2021-11-01T18:03:56.158055645-04:00",
+              "FinishAt": "2021-11-01T18:04:04.995414529-04:00",
+              "PlanError": null,
+              "Filesystems": [
+                {
+                  "Info": {
+                    "Name": "rpool/safe"
+                  },
+                  "State": "done",
+                  "PlanError": null,
+                  "StepError": null,
+                  "CurrentStep": 1,
+                  "Steps": [
+                    {
+                      "Info": {
+                        "From": "@zrepl_20211101_214856_000",
+                        "To": "@zrepl_20211101_220356_000",
+                        "Resumed": false,
+                        "Encrypted": "no",
+                        "BytesExpected": 624,
+                        "BytesReplicated": 624
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Info": {
+                    "Name": "rpool/safe/home"
+                  },
+                  "State": "done",
+                  "PlanError": null,
+                  "StepError": null,
+                  "CurrentStep": 1,
+                  "Steps": [
+                    {
+                      "Info": {
+                        "From": "@zrepl_20211101_214856_000",
+                        "To": "@zrepl_20211101_220356_000",
+                        "Resumed": false,
+                        "Encrypted": "no",
+                        "BytesExpected": 624,
+                        "BytesReplicated": 624
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Info": {
+                    "Name": "rpool/safe/home/jeff"
+                  },
+                  "State": "done",
+                  "PlanError": null,
+                  "StepError": null,
+                  "CurrentStep": 1,
+                  "Steps": [
+                    {
+                      "Info": {
+                        "From": "@zrepl_20211101_214856_000",
+                        "To": "@zrepl_20211101_220356_000",
+                        "Resumed": false,
+                        "Encrypted": "no",
+                        "BytesExpected": 124200,
+                        "BytesReplicated": 346872
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Info": {
+                    "Name": "rpool/safe/home/root"
+                  },
+                  "State": "done",
+                  "PlanError": null,
+                  "StepError": null,
+                  "CurrentStep": 1,
+                  "Steps": [
+                    {
+                      "Info": {
+                        "From": "@zrepl_20211101_214856_000",
+                        "To": "@zrepl_20211101_220356_000",
+                        "Resumed": false,
+                        "Encrypted": "no",
+                        "BytesExpected": 624,
+                        "BytesReplicated": 624
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "PruningSender": {
+          "State": "Done",
+          "Error": "",
+          "Pending": [],
+          "Completed": [
+            {
+              "Filesystem": "rpool/safe",
+              "SnapshotList": [
+                {
+                  "Name": "zrepl_20211018_204856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-18T16:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211022_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-22T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211023_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-23T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211024_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-24T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211025_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-25T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211026_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-26T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211027_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-27T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211028_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-28T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211029_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-29T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211030_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-30T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T17:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_220356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T18:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_230356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T19:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_000356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T20:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_010356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T21:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_020356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T22:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_030356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T23:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_040356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T00:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_050356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T01:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_060356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T02:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_070356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T03:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_080356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T04:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_090356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T05:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_100356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T06:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_110356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T07:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_120356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T08:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_130356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T09:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_140356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T10:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_150356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T11:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_160356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T12:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_180356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T14:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_190356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T15:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_200356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T16:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_211856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_213356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:33:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_214856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_220356_000",
+                  "Replicated": false,
+                  "Date": "2021-11-01T18:03:56-04:00"
+                }
+              ],
+              "DestroyList": [
+                {
+                  "Name": "zrepl_20211031_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T17:03:56-04:00"
+                }
+              ],
+              "SkipReason": "",
+              "LastError": ""
+            },
+            {
+              "Filesystem": "rpool/safe/home",
+              "SnapshotList": [
+                {
+                  "Name": "zrepl_20211018_204856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-18T16:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211022_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-22T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211023_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-23T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211024_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-24T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211025_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-25T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211026_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-26T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211027_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-27T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211028_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-28T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211029_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-29T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211030_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-30T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T17:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_220356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T18:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_230356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T19:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_000356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T20:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_010356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T21:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_020356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T22:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_030356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T23:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_040356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T00:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_050356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T01:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_060356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T02:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_070356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T03:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_080356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T04:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_090356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T05:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_100356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T06:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_110356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T07:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_120356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T08:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_130356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T09:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_140356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T10:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_150356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T11:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_160356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T12:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_180356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T14:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_190356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T15:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_200356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T16:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_211856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_213356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:33:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_214856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_220356_000",
+                  "Replicated": false,
+                  "Date": "2021-11-01T18:03:56-04:00"
+                }
+              ],
+              "DestroyList": [
+                {
+                  "Name": "zrepl_20211031_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T17:03:56-04:00"
+                }
+              ],
+              "SkipReason": "",
+              "LastError": ""
+            },
+            {
+              "Filesystem": "rpool/safe/home/jeff",
+              "SnapshotList": [
+                {
+                  "Name": "zrepl_20211018_204856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-18T16:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211022_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-22T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211023_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-23T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211024_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-24T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211025_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-25T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211026_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-26T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211027_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-27T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211028_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-28T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211029_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-29T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211030_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-30T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T17:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_220356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T18:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_230356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T19:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_000356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T20:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_010356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T21:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_020356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T22:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_030356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T23:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_040356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T00:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_050356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T01:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_060356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T02:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_070356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T03:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_080356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T04:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_090356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T05:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_100356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T06:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_110356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T07:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_120356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T08:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_130356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T09:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_140356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T10:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_150356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T11:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_160356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T12:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_180356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T14:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_190356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T15:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_200356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T16:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_211856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_213356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:33:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_214856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_220356_000",
+                  "Replicated": false,
+                  "Date": "2021-11-01T18:03:56-04:00"
+                }
+              ],
+              "DestroyList": [
+                {
+                  "Name": "zrepl_20211031_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T17:03:56-04:00"
+                }
+              ],
+              "SkipReason": "",
+              "LastError": ""
+            },
+            {
+              "Filesystem": "rpool/safe/home/root",
+              "SnapshotList": [
+                {
+                  "Name": "zrepl_20211018_204856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-18T16:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211022_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-22T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211023_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-23T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211024_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-24T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211025_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-25T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211026_164856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-26T12:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211027_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-27T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211028_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-28T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211029_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-29T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211030_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-30T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T17:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_220356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T18:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_230356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T19:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_000356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T20:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_010356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T21:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_020356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T22:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_030356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T23:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_040356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T00:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_050356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T01:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_060356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T02:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_070356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T03:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_080356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T04:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_090356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T05:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_100356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T06:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_110356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T07:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_120356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T08:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_130356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T09:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_140356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T10:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_150356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T11:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_160356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T12:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_170356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T13:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_180356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T14:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_190356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T15:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_200356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T16:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_211856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_213356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:33:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_214856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_220356_000",
+                  "Replicated": false,
+                  "Date": "2021-11-01T18:03:56-04:00"
+                }
+              ],
+              "DestroyList": [
+                {
+                  "Name": "zrepl_20211031_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T17:03:56-04:00"
+                }
+              ],
+              "SkipReason": "",
+              "LastError": ""
+            }
+          ]
+        },
+        "PruningReceiver": {
+          "State": "Done",
+          "Error": "",
+          "Pending": [],
+          "Completed": [
+            {
+              "Filesystem": "rpool",
+              "SnapshotList": null,
+              "DestroyList": null,
+              "SkipReason": "filesystem is placeholder",
+              "LastError": ""
+            },
+            {
+              "Filesystem": "rpool/safe",
+              "SnapshotList": [
+                {
+                  "Name": "zrepl_20210928_151814_000",
+                  "Replicated": true,
+                  "Date": "2021-09-28T11:18:14-04:00"
+                },
+                {
+                  "Name": "zrepl_20211022_163356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-22T12:33:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211023_163356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-23T12:33:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211024_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-24T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211025_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-25T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211026_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-26T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211027_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-27T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211028_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-28T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211029_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-29T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211030_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-30T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_211856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T17:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_221856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T18:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_231856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T19:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_001856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T20:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_011856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T21:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_021856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T22:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_031856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T23:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_041856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T00:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_051856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T01:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_061856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T02:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_071856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T03:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_081856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T04:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_091856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T05:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_101856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T06:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_111856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T07:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_121856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T08:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_131856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T09:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_141856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T10:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_151856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T11:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_161856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T12:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_181856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T14:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_191856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T15:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_201856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T16:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_211856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_213356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:33:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_214856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_220356_000",
+                  "Replicated": false,
+                  "Date": "2021-11-01T18:03:56-04:00"
+                }
+              ],
+              "DestroyList": [
+                {
+                  "Name": "zrepl_20211101_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:03:56-04:00"
+                }
+              ],
+              "SkipReason": "",
+              "LastError": ""
+            },
+            {
+              "Filesystem": "rpool/safe/home",
+              "SnapshotList": [
+                {
+                  "Name": "zrepl_20210928_152814_000",
+                  "Replicated": true,
+                  "Date": "2021-09-28T11:28:14-04:00"
+                },
+                {
+                  "Name": "zrepl_20211022_163356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-22T12:33:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211023_163356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-23T12:33:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211024_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-24T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211025_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-25T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211026_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-26T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211027_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-27T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211028_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-28T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211029_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-29T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211030_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-30T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_211856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T17:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_221856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T18:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_231856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T19:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_001856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T20:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_011856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T21:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_021856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T22:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_031856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T23:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_041856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T00:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_051856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T01:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_061856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T02:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_071856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T03:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_081856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T04:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_091856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T05:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_101856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T06:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_111856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T07:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_121856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T08:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_131856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T09:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_141856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T10:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_151856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T11:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_161856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T12:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_181856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T14:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_191856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T15:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_201856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T16:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_211856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_213356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:33:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_214856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_220356_000",
+                  "Replicated": false,
+                  "Date": "2021-11-01T18:03:56-04:00"
+                }
+              ],
+              "DestroyList": [
+                {
+                  "Name": "zrepl_20211101_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:03:56-04:00"
+                }
+              ],
+              "SkipReason": "",
+              "LastError": ""
+            },
+            {
+              "Filesystem": "rpool/safe/home/jeff",
+              "SnapshotList": [
+                {
+                  "Name": "zrepl_20210928_152814_000",
+                  "Replicated": true,
+                  "Date": "2021-09-28T11:28:14-04:00"
+                },
+                {
+                  "Name": "zrepl_20211022_163356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-22T12:33:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211023_163356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-23T12:33:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211024_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-24T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211025_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-25T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211026_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-26T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211027_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-27T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211028_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-28T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211029_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-29T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211030_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-30T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_211856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T17:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_221856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T18:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_231856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T19:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_001856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T20:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_011856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T21:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_021856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T22:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_031856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T23:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_041856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T00:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_051856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T01:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_061856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T02:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_071856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T03:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_081856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T04:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_091856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T05:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_101856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T06:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_111856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T07:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_121856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T08:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_131856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T09:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_141856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T10:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_151856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T11:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_161856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T12:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_181856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T14:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_191856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T15:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_201856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T16:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_211856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_213356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:33:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_214856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_220356_000",
+                  "Replicated": false,
+                  "Date": "2021-11-01T18:03:56-04:00"
+                }
+              ],
+              "DestroyList": [
+                {
+                  "Name": "zrepl_20211101_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:03:56-04:00"
+                }
+              ],
+              "SkipReason": "",
+              "LastError": ""
+            },
+            {
+              "Filesystem": "rpool/safe/home/root",
+              "SnapshotList": [
+                {
+                  "Name": "zrepl_20210928_152814_000",
+                  "Replicated": true,
+                  "Date": "2021-09-28T11:28:14-04:00"
+                },
+                {
+                  "Name": "zrepl_20211022_163356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-22T12:33:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211023_163356_000",
+                  "Replicated": true,
+                  "Date": "2021-10-23T12:33:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211024_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-24T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211025_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-25T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211026_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-26T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211027_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-27T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211028_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-28T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211029_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-29T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211030_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-30T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_211856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T17:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_221856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T18:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211031_231856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T19:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_001856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T20:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_011856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T21:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_021856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T22:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_031856_000",
+                  "Replicated": true,
+                  "Date": "2021-10-31T23:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_041856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T00:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_051856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T01:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_061856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T02:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_071856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T03:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_081856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T04:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_091856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T05:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_101856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T06:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_111856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T07:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_121856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T08:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_131856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T09:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_141856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T10:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_151856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T11:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_161856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T12:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_171856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T13:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_181856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T14:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_191856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T15:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_201856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T16:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:03:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_211856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:18:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_213356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:33:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_214856_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:48:56-04:00"
+                },
+                {
+                  "Name": "zrepl_20211101_220356_000",
+                  "Replicated": false,
+                  "Date": "2021-11-01T18:03:56-04:00"
+                }
+              ],
+              "DestroyList": [
+                {
+                  "Name": "zrepl_20211101_210356_000",
+                  "Replicated": true,
+                  "Date": "2021-11-01T17:03:56-04:00"
+                }
+              ],
+              "SkipReason": "",
+              "LastError": ""
+            }
+          ]
+        },
+        "Snapshotting": {
+          "State": 16,
+          "SleepUntil": "2021-11-01T18:18:56.017061068-04:00",
+          "Error": "",
+          "Progress": [
+            {
+              "Path": "rpool/safe",
+              "State": 4,
+              "SnapName": "zrepl_20211101_220356_000",
+              "StartAt": "2021-11-01T18:03:56.038599822-04:00",
+              "Hooks": "1 Ok 57ms snapshot",
+              "HooksHadError": false,
+              "DoneAt": "2021-11-01T18:03:56.096126632-04:00"
+            },
+            {
+              "Path": "rpool/safe/home",
+              "State": 4,
+              "SnapName": "zrepl_20211101_220356_000",
+              "StartAt": "2021-11-01T18:03:56.096165415-04:00",
+              "Hooks": "1 Ok 30ms snapshot",
+              "HooksHadError": false,
+              "DoneAt": "2021-11-01T18:03:56.12693391-04:00"
+            },
+            {
+              "Path": "rpool/safe/home/jeff",
+              "State": 4,
+              "SnapName": "zrepl_20211101_220356_000",
+              "StartAt": "2021-11-01T18:03:56.126945828-04:00",
+              "Hooks": "1 Ok 16ms snapshot",
+              "HooksHadError": false,
+              "DoneAt": "2021-11-01T18:03:56.143132049-04:00"
+            },
+            {
+              "Path": "rpool/safe/home/root",
+              "State": 4,
+              "SnapName": "zrepl_20211101_220356_000",
+              "StartAt": "2021-11-01T18:03:56.143141757-04:00",
+              "Hooks": "1 Ok 14ms snapshot",
+              "HooksHadError": false,
+              "DoneAt": "2021-11-01T18:03:56.157796391-04:00"
+            }
+          ]
+        }
+      },
+      "type": "push"
+    }
+  },
+  "Global": {
+    "ZFSCmds": {
+      "Active": null
+    },
+    "Envconst": {
+      "Entries": [
+        {
+          "Var": "ZREPL_SNAPPER_SYNCUP_WARN_MIN_DURATION",
+          "Value": "1s",
+          "ValueGoType": "time.Duration"
+        },
+        {
+          "Var": "ZFS_SEND_PIPE_CAPACITY_HINT",
+          "Value": "1048576",
+          "ValueGoType": "int64"
+        },
+        {
+          "Var": "ZREPL_TRACE_DEBUG_ENABLED",
+          "Value": "false",
+          "ValueGoType": "bool"
+        },
+        {
+          "Var": "ZREPL_ZFS_RESUME_RECV_POOL_SUPPORT_RECHECK_TIMEOUT",
+          "Value": "30s",
+          "ValueGoType": "time.Duration"
+        },
+        {
+          "Var": "ZREPL_TRANSPORT_MUX_TIMEOUT",
+          "Value": "10s",
+          "ValueGoType": "time.Duration"
+        },
+        {
+          "Var": "ZREPL_EXPERIMENTAL_ZFS_ENCRYPTION_CLI_SUPPORTED",
+          "Value": "true",
+          "ValueGoType": "bool"
+        },
+        {
+          "Var": "ZREPL_ENDPOINT_LIST_ABSTRACTIONS_QUERY_CREATETXG_RANGE_BOUND_ALLOW_0",
+          "Value": "false",
+          "ValueGoType": "bool"
+        },
+        {
+          "Var": "ZREPL_ACTIVITY_TRACE",
+          "Value": "",
+          "ValueGoType": "string"
+        },
+        {
+          "Var": "ZREPL_DAEMON_AUTOSTART_PPROF_SERVER",
+          "Value": "",
+          "ValueGoType": "string"
+        },
+        {
+          "Var": "ZREPL_RPC_CLIENT_VERSIONHANDSHAKE_TIMEOUT",
+          "Value": "10s",
+          "ValueGoType": "time.Duration"
+        },
+        {
+          "Var": "ZREPL_ZFS_MAX_HOLD_TAG_LEN",
+          "Value": "255",
+          "ValueGoType": "int"
+        },
+        {
+          "Var": "ZREPL_REPLICATION_MAX_ATTEMPTS",
+          "Value": "3",
+          "ValueGoType": "int"
+        },
+        {
+          "Var": "ZREPL_PRUNER_RETRY_INTERVAL",
+          "Value": "10s",
+          "ValueGoType": "time.Duration"
+        },
+        {
+          "Var": "ZREPL_REPLICATION_RECONNECT_HARD_FAIL_TIMEOUT",
+          "Value": "10m0s",
+          "ValueGoType": "time.Duration"
+        },
+        {
+          "Var": "ZREPL_EXPERIMENTAL_ZFS_COMMA_SYNTAX_SUPPORTED",
+          "Value": "true",
+          "ValueGoType": "bool"
+        },
+        {
+          "Var": "ZREPL_ZFS_SEND_STDERR_MAX_CAPTURE_SIZE",
+          "Value": "32768",
+          "ValueGoType": "int"
+        },
+        {
+          "Var": "ZREPL_TRACE_ID_NUM_BYTES",
+          "Value": "3",
+          "ValueGoType": "int"
+        }
+      ]
+    }
+  }
+}
