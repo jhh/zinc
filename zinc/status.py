@@ -26,7 +26,7 @@ class FileSystem:
 
 @dataclass
 class Replication:
-    """Class representing replication stage of a push job."""
+    """Class representing attempt from replication stage of a push job."""
 
     state: str
     start_at: datetime

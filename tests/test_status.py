@@ -107,7 +107,9 @@ def repl_json(state, date_json, offset_date_json, repl_plan_error, fs_json):
 
 @pytest.fixture
 def repl_dict(repl_json):
-    return json.loads(repl_json)
+    repl = json.loads(repl_json)
+    # replication obj is really one of the attempts in the replication stage
+    return repl["Attempts"][0]
 
 
 @pytest.fixture
@@ -156,7 +158,6 @@ def test_snapshot(snapshot_dict, snapshot_name, snapshot_replicated, date):
     )
 
 
-@pytest.mark.xfail
 def test_replication(repl_dict, state, date, offset_date, repl_plan_error, fs_dict):
     assert Replication.from_dict(repl_dict) == Replication(
         state=state,
