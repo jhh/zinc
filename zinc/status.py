@@ -5,7 +5,7 @@ from flask import json
 from dateutil.parser import isoparse
 
 
-@dataclass
+@dataclass(frozen=True)
 class FileSystem:
     """Class representing a replicated file system."""
 
@@ -24,7 +24,7 @@ class FileSystem:
         )
 
 
-@dataclass
+@dataclass(frozen=True)
 class Replication:
     """Class representing attempt from replication stage of a push job."""
 
@@ -46,7 +46,7 @@ class Replication:
         )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SnapShot:
     """Class representing a file system snap shot."""
 
@@ -60,22 +60,37 @@ class SnapShot:
             name=ss["Name"], replicated=ss["Replicated"], date=isoparse(ss["Date"])
         )
 
+@dataclass(frozen=True)
+class FileSystemSnapShotSet():
+    """Class representing a file system and associated snapshots."""
 
-@dataclass
+    file_system: "FileSystem"
+    skip_reason: str
+    last_error: Union[str, None]
+    snapshot_list: list["SnapShot"]
+    destroy_list: list["SnapShot"]
+
+
+
+@dataclass(frozen=True)
 class PruningSender:
     """Class representing sender pruning stage of a push job."""
+
+    state: str
+    error: Union[str, None]
+
 
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class PruningReceiver:
     """Class representing receiver pruning stage of a push job."""
 
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class Job:
     """Class representing a zrepl job."""
 
@@ -95,21 +110,21 @@ class Job:
             raise NotImplementedError(f"unrecognized job type: {job['type']}")
 
 
-@dataclass
+@dataclass(frozen=True)
 class InternalJob(Job):
     """Class representing a zrepl internal job."""
 
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class PushJob(Job):
     """Class representing a zrepl push job."""
 
     replication_attempts: list[Replication]
 
 
-@dataclass
+@dataclass(frozen=True)
 class Status:
     """Class representing zrepl status."""
 
