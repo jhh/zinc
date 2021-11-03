@@ -42,8 +42,37 @@ class Replication:
             start_at=isoparse(r["StartAt"]),
             finish_at=isoparse(r["FinishAt"]),
             plan_error=r["PlanError"],
-            file_systems=fs_list
+            file_systems=fs_list,
         )
+
+
+@dataclass
+class SnapShot:
+    """Class representing a file system snap shot."""
+
+    name: str
+    replicated: bool
+    date: datetime
+
+    @staticmethod
+    def from_dict(ss: dict) -> "SnapShot":
+        return SnapShot(
+            name=ss["Name"], replicated=ss["Replicated"], date=isoparse(ss["Date"])
+        )
+
+
+@dataclass
+class PruningSender:
+    """Class representing sender pruning stage of a push job."""
+
+    pass
+
+
+@dataclass
+class PruningReceiver:
+    """Class representing receiver pruning stage of a push job."""
+
+    pass
 
 
 @dataclass
