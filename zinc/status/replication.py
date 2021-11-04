@@ -17,6 +17,17 @@ class Step:
     bytes_replicated: int
     encrypted: bool = False
 
+    @staticmethod
+    def from_dict(step: dict) -> "Step":
+        info = step["Info"]
+        return Step(
+            from_snapshot=info["From"],
+            to_snapshot=info["To"],
+            resumed=info["Resumed"],
+            bytes_expected=info["BytesExpected"],
+            bytes_replicated=info["BytesReplicated"],
+        )
+
 
 @dataclass(frozen=True)
 class Replication:

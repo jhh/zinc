@@ -2,6 +2,7 @@ import pytest
 from datetime import datetime, timedelta
 from flask import json
 
+
 @pytest.fixture
 def status_json():
     with open("tests/status.json", "r") as j:
@@ -40,6 +41,68 @@ def offset_date_json(offset_date):
 
 
 @pytest.fixture
+def step_from_snapshot():
+    return "@zrepl_20211101_214856_000"
+
+
+@pytest.fixture
+def step_to_snapshot():
+    return "@zrepl_20211101_220356_000"
+
+
+@pytest.fixture
+def step_resumed():
+    return False
+
+
+@pytest.fixture
+def step_encrypted():
+    return False
+
+
+@pytest.fixture
+def step_encrypted_json(step_encrypted):
+    return "yes" if step_encrypted else "no"
+
+
+@pytest.fixture
+def step_bytes_expected():
+    return 1024
+
+
+@pytest.fixture
+def step_bytes_replicated():
+    return 1024
+
+
+@pytest.fixture
+def step_json(
+    step_from_snapshot,
+    step_to_snapshot,
+    step_resumed,
+    step_encrypted_json,
+    step_bytes_expected,
+    step_bytes_replicated,
+):
+    return f"""
+    {{
+      "Info": {{
+        "From": "{step_from_snapshot}",
+        "To": "{step_to_snapshot}",
+        "Resumed": {json.dumps(step_resumed)},
+        "Encrypted": "{step_encrypted_json}",
+        "BytesExpected": {step_bytes_expected},
+        "BytesReplicated": {step_bytes_replicated}
+      }}
+    }}
+    """
+
+@pytest.fixture
+def step_dict(step_json):
+    return json.loads(step_json)
+
+
+@pytest.fixture
 def fs_plan_error():
     return None
 
@@ -50,7 +113,7 @@ def fs_step_error():
 
 
 @pytest.fixture
-def fs_json(fs_name, state, fs_plan_error, fs_step_error):
+def fs_json(fs_name, state, fs_plan_error, fs_step_error, step_json):
     return f"""
     {{
       "Info": {{
@@ -60,18 +123,7 @@ def fs_json(fs_name, state, fs_plan_error, fs_step_error):
       "PlanError": {json.dumps(fs_plan_error)},
       "StepError": {json.dumps(fs_step_error)},
       "CurrentStep": 1,
-      "Steps": [
-        {{
-          "Info": {{
-            "From": "@zrepl_20211101_214856_000",
-            "To": "@zrepl_20211101_220356_000",
-            "Resumed": false,
-            "Encrypted": "no",
-            "BytesExpected": 624,
-            "BytesReplicated": 624
-          }}
-        }}
-      ]
+      "Steps": [ {step_json} ]
     }}
     """
 
@@ -139,5 +191,3 @@ def snapshot_json(snapshot_name, snapshot_replicated, date_json):
 @pytest.fixture
 def snapshot_dict(snapshot_json):
     return json.loads(snapshot_json)
-
-
