@@ -7,6 +7,18 @@ from .filesystem import FileSystem
 
 
 @dataclass(frozen=True)
+class Step:
+    """Class representing a replication step."""
+
+    from_snapshot: str
+    to_snapshot: str
+    resumed: bool
+    bytes_expected: int
+    bytes_replicated: int
+    encrypted: bool = False
+
+
+@dataclass(frozen=True)
 class Replication:
     """Class representing attempt from replication stage of a push job."""
 

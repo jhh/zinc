@@ -1,8 +1,6 @@
-from datetime import datetime, timedelta
 import pytest
-from zinc.status import FileSystem, SnapShot, Replication
+from datetime import datetime, timedelta
 from flask import json
-
 
 @pytest.fixture
 def status_json():
@@ -143,26 +141,3 @@ def snapshot_dict(snapshot_json):
     return json.loads(snapshot_json)
 
 
-def test_filesystem(fs_dict, fs_name, state, fs_plan_error, fs_step_error):
-    assert FileSystem.from_dict(fs_dict) == FileSystem(
-        name=fs_name, state=state, plan_error=fs_plan_error, step_error=fs_step_error
-    )
-
-
-def test_snapshot(snapshot_dict, snapshot_name, snapshot_replicated, date):
-    snapshot = SnapShot.from_dict(snapshot_dict)
-    assert snapshot == SnapShot(
-        name=snapshot_name,
-        replicated=snapshot_replicated,
-        date=date,
-    )
-
-
-def test_replication(repl_dict, state, date, offset_date, repl_plan_error, fs_dict):
-    assert Replication.from_dict(repl_dict) == Replication(
-        state=state,
-        start_at=date,
-        finish_at=offset_date,
-        plan_error=repl_plan_error,
-        file_systems=[FileSystem.from_dict(fs_dict)],
-    )
