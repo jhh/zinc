@@ -9,5 +9,3 @@ def test_snapshot(snapshot_dict, snapshot_name, snapshot_replicated, date):
         replicated=snapshot_replicated,
         date=date,
     )
-
-

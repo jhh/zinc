@@ -97,6 +97,7 @@ def step_json(
     }}
     """
 
+
 @pytest.fixture
 def step_dict(step_json):
     return json.loads(step_json)
