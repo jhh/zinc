@@ -11,11 +11,6 @@ def status_json():
 
 
 @pytest.fixture
-def fs_name():
-    return "rpool/safe/home/root"
-
-
-@pytest.fixture
 def state():
     return "done"
 
@@ -104,6 +99,11 @@ def step_dict(step_json):
 
 
 @pytest.fixture
+def fs_name():
+    return "rpool/safe/home/root"
+
+
+@pytest.fixture
 def fs_plan_error():
     return None
 
@@ -114,7 +114,12 @@ def fs_step_error():
 
 
 @pytest.fixture
-def fs_json(fs_name, state, fs_plan_error, fs_step_error, step_json):
+def fs_current_step():
+    return 1
+
+
+@pytest.fixture
+def fs_json(fs_name, state, fs_plan_error, fs_step_error, fs_current_step, step_json):
     return f"""
     {{
       "Info": {{
@@ -123,7 +128,7 @@ def fs_json(fs_name, state, fs_plan_error, fs_step_error, step_json):
       "State": "{state}",
       "PlanError": {json.dumps(fs_plan_error)},
       "StepError": {json.dumps(fs_step_error)},
-      "CurrentStep": 1,
+      "CurrentStep": {fs_current_step},
       "Steps": [ {step_json} ]
     }}
     """
@@ -135,32 +140,40 @@ def repl_plan_error():
 
 
 @pytest.fixture
-def repl_json(state, date_json, offset_date_json, repl_plan_error, fs_json):
+def attempt_json(state, date_json, offset_date_json, repl_plan_error, fs_json):
     return f"""
     {{
-      "StartAt": "2021-11-01T18:03:56.157969708-04:00",
-      "FinishAt": "0001-01-01T00:00:00Z",
-      "WaitReconnectSince": "0001-01-01T00:00:00Z",
-      "WaitReconnectUntil": "0001-01-01T00:00:00Z",
+      "State": "{state}",
+      "StartAt": "{date_json}",
+      "FinishAt": "{offset_date_json}",
+      "PlanError": {json.dumps(repl_plan_error)},
+      "Filesystems": [ {fs_json} ]
+    }}
+    """
+
+
+@pytest.fixture
+def attempt_dict(attempt_json):
+    return json.loads(attempt_json)
+
+
+@pytest.fixture
+def repl_json(date_json, offset_date_json, attempt_json):
+    return f"""
+    {{
+      "StartAt": "{date_json}",
+      "FinishAt": "{offset_date_json}",
+      "WaitReconnectSince": "{date_json}",
+      "WaitReconnectUntil": "{date_json}",
       "WaitReconnectError": null,
-      "Attempts": [
-        {{
-          "State": "{state}",
-          "StartAt": "{date_json}",
-          "FinishAt": "{offset_date_json}",
-          "PlanError": {json.dumps(repl_plan_error)},
-          "Filesystems": [ {fs_json} ]
-        }}
-      ]
+      "Attempts": [ {attempt_json} ]
     }}
     """
 
 
 @pytest.fixture
 def repl_dict(repl_json):
-    repl = json.loads(repl_json)
-    # replication obj is really one of the attempts in the replication stage
-    return repl["Attempts"][0]
+    return json.loads(repl_json)
 
 
 @pytest.fixture

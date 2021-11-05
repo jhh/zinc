@@ -3,8 +3,6 @@ from datetime import datetime
 from dateutil.parser import isoparse
 from typing import Union
 
-from .filesystem import FileSystem
-
 
 @dataclass(frozen=True)
 class SnapShot:
@@ -25,7 +23,7 @@ class SnapShot:
 class FileSystemSnapShotSet:
     """Class representing a file system and associated snapshots."""
 
-    file_system: "FileSystem"
+    file_system: str
     skip_reason: str
     last_error: Union[str, None]
     snapshot_list: list["SnapShot"]
