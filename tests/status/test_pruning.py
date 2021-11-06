@@ -2,9 +2,7 @@ from zinc.status.pruning import Attempt, SnapShot, Pruning
 from tests.status.fixtures import *
 
 
-def test_snapshot(
-    prune_snapshot_dict, snapshot_name, prune_snapshot_replicated, date
-):
+def test_snapshot(prune_snapshot_dict, snapshot_name, prune_snapshot_replicated, date):
     snapshot = SnapShot.from_dict(prune_snapshot_dict)
     assert snapshot == SnapShot(
         name=snapshot_name,

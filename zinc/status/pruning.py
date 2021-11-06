@@ -34,12 +34,14 @@ class Attempt:
 
     @staticmethod
     def from_dict(a: dict) -> "Attempt":
+        snapshot_list = a["SnapshotList"] or []
+        destroy_list = a["DestroyList"] or []
         return Attempt(
             file_system=a["Filesystem"],
             skip_reason=a["SkipReason"],
             last_error=a["LastError"],
-            snapshot_list=[SnapShot.from_dict(ss) for ss in a["SnapshotList"]],
-            destroy_list=[SnapShot.from_dict(ss) for ss in a["DestroyList"]],
+            snapshot_list=[SnapShot.from_dict(ss) for ss in snapshot_list],
+            destroy_list=[SnapShot.from_dict(ss) for ss in destroy_list],
         )
 
 
@@ -53,10 +55,14 @@ class Pruning:
     completed: List[Attempt]
 
     @staticmethod
-    def from_dict(p: dict) -> "Pruning":
+    def from_dict(p: dict) -> Union["Pruning", None]:
+        if p is None:
+            return None
+        pending_list = p["Pending"] or []
+        completed_list = p["Completed"] or []
         return Pruning(
             state=p["State"],
             error=p["Error"],
-            pending=[Attempt.from_dict(a) for a in p["Pending"]],
-            completed=[Attempt.from_dict(a) for a in p["Completed"]],
+            pending=[Attempt.from_dict(a) for a in pending_list],
+            completed=[Attempt.from_dict(a) for a in completed_list],
         )

@@ -40,13 +40,14 @@ class FileSystem:
 
     @staticmethod
     def from_dict(fs: dict) -> "FileSystem":
+        steps_list = fs["Steps"] or []
         return FileSystem(
             name=fs["Info"]["Name"],
             state=fs["State"],
             plan_error=fs["PlanError"],
             step_error=fs["StepError"],
             current_step=fs["CurrentStep"],
-            steps=[Step.from_dict(s) for s in fs["Steps"]],
+            steps=[Step.from_dict(s) for s in steps_list],
         )
 
 
@@ -61,11 +62,12 @@ class Attempt:
 
     @staticmethod
     def from_dict(a: dict) -> "Attempt":
+        fs_list = a["Filesystems"] or []
         return Attempt(
             state=a["State"],
             start_at=isoparse(a["StartAt"]),
             finish_at=isoparse(a["FinishAt"]),
-            file_systems=[FileSystem.from_dict(fs) for fs in a["Filesystems"]],
+            file_systems=[FileSystem.from_dict(fs) for fs in fs_list],
         )
 
 
@@ -81,12 +83,15 @@ class Replication:
     attempts: list[Attempt]
 
     @staticmethod
-    def from_dict(r: dict) -> "Replication":
+    def from_dict(r: dict) -> Union["Replication", None]:
+        if r is None:
+            return None
+        attempts_list = r["Attempts"] or []
         return Replication(
             start_at=isoparse(r["StartAt"]),
             finish_at=isoparse(r["FinishAt"]),
             wait_reconnect_since=isoparse(r["WaitReconnectSince"]),
             wait_reconnect_until=isoparse(r["WaitReconnectUntil"]),
             wait_reconnect_error=r["WaitReconnectError"],
-            attempts=[Attempt.from_dict(a) for a in r["Attempts"]],
+            attempts=[Attempt.from_dict(a) for a in attempts_list],
         )

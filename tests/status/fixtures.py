@@ -4,13 +4,6 @@ from flask import json
 
 
 @pytest.fixture
-def status_json():
-    with open("tests/status.json", "r") as j:
-        data = j.read()
-    return data
-
-
-@pytest.fixture
 def state():
     return "done"
 
@@ -315,6 +308,27 @@ def snapshotting_json(
     }}
     """
 
+
 @pytest.fixture
 def snapshotting_dict(snapshotting_json):
     return json.loads(snapshotting_json)
+
+
+@pytest.fixture
+def push_job_json(repl_json, pruning_json, snapshotting_json):
+    return f"""
+    {{
+      "type": "push",
+      "push": {{
+        "Replication": {repl_json},
+        "PruningSender": {pruning_json},
+        "PruningReceiver": {pruning_json},
+        "Snapshotting": {snapshotting_json}
+      }}
+    }}
+    """
+
+
+@pytest.fixture
+def push_job_dict(push_job_json):
+    return json.loads(push_job_json)

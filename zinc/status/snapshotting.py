@@ -39,10 +39,13 @@ class SnapShotting:
     progress: List[SnapShot]
 
     @staticmethod
-    def from_dict(ss: dict) -> "SnapShotting":
+    def from_dict(ss: dict) -> Union["SnapShotting", None]:
+        if ss is None:
+            return None
+        progress_list = ss["Progress"] or []
         return SnapShotting(
             state=ss["State"],
             sleep_until=isoparse(ss["SleepUntil"]),
             error=ss["Error"],
-            progress=[SnapShot.from_dict(p) for p in ss["Progress"]],
+            progress=[SnapShot.from_dict(p) for p in progress_list],
         )
