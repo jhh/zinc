@@ -182,26 +182,73 @@ def fs_dict(fs_json):
 
 
 @pytest.fixture
-def snapshot_name():
+def prune_snapshot_name():
     return "zrepl_20211018_204856_000"
 
 
 @pytest.fixture
-def snapshot_replicated():
+def prune_snapshot_replicated():
     return False
 
 
 @pytest.fixture
-def snapshot_json(snapshot_name, snapshot_replicated, date_json):
+def prune_snapshot_json(prune_snapshot_name, prune_snapshot_replicated, date_json):
     return f"""
     {{
-      "Name": "{snapshot_name}",
-      "Replicated": {json.dumps(snapshot_replicated)},
+      "Name": "{prune_snapshot_name}",
+      "Replicated": {json.dumps(prune_snapshot_replicated)},
       "Date": "{date_json}"
     }}
     """
 
 
 @pytest.fixture
-def snapshot_dict(snapshot_json):
-    return json.loads(snapshot_json)
+def prune_snapshot_dict(prune_snapshot_json):
+    return json.loads(prune_snapshot_json)
+
+
+@pytest.fixture
+def prune_skip_reason():
+    return "because"
+
+
+@pytest.fixture
+def prune_last_error():
+    return "error"
+
+
+@pytest.fixture
+def prune_attempt_json(
+    fs_name, prune_snapshot_json, prune_skip_reason, prune_last_error
+):
+    return f"""
+    {{
+      "Filesystem": "{ fs_name }",
+      "SnapshotList": [ { prune_snapshot_json } ],
+      "DestroyList": [ { prune_snapshot_json } ],
+      "SkipReason": "{ prune_skip_reason }",
+      "LastError": "{ prune_last_error }"
+    }}
+    """
+
+
+@pytest.fixture
+def prune_attempt_dict(prune_attempt_json):
+    return json.loads(prune_attempt_json)
+
+
+@pytest.fixture
+def pruning_json(state, prune_last_error, prune_attempt_json):
+    return f"""
+    {{
+      "State": "{ state }",
+      "Error": "{ prune_last_error }",
+      "Pending": [{ prune_attempt_json }],
+      "Completed": [{ prune_attempt_json }]
+    }}
+    """
+
+
+@pytest.fixture
+def pruning_dict(pruning_json):
+    return json.loads(pruning_json)
