@@ -3,11 +3,11 @@ from tests.status.fixtures import *
 
 
 def test_snapshot(
-    prune_snapshot_dict, prune_snapshot_name, prune_snapshot_replicated, date
+    prune_snapshot_dict, snapshot_name, prune_snapshot_replicated, date
 ):
     snapshot = SnapShot.from_dict(prune_snapshot_dict)
     assert snapshot == SnapShot(
-        name=prune_snapshot_name,
+        name=snapshot_name,
         replicated=prune_snapshot_replicated,
         date=date,
     )

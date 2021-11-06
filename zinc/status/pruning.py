@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from datetime import datetime
 from dateutil.parser import isoparse
-from typing import Union
+from typing import List, Union
 
 
 @dataclass(frozen=True)
@@ -29,8 +29,8 @@ class Attempt:
     file_system: str
     skip_reason: str
     last_error: Union[str, None]
-    snapshot_list: list[SnapShot]
-    destroy_list: list[SnapShot]
+    snapshot_list: List[SnapShot]
+    destroy_list: List[SnapShot]
 
     @staticmethod
     def from_dict(a: dict) -> "Attempt":
@@ -49,8 +49,8 @@ class Pruning:
 
     state: str
     error: Union[str, None]
-    pending: list[Attempt]
-    completed: list[Attempt]
+    pending: List[Attempt]
+    completed: List[Attempt]
 
     @staticmethod
     def from_dict(p: dict) -> "Pruning":

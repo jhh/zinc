@@ -182,7 +182,7 @@ def fs_dict(fs_json):
 
 
 @pytest.fixture
-def prune_snapshot_name():
+def snapshot_name():
     return "zrepl_20211018_204856_000"
 
 
@@ -192,10 +192,10 @@ def prune_snapshot_replicated():
 
 
 @pytest.fixture
-def prune_snapshot_json(prune_snapshot_name, prune_snapshot_replicated, date_json):
+def prune_snapshot_json(snapshot_name, prune_snapshot_replicated, date_json):
     return f"""
     {{
-      "Name": "{prune_snapshot_name}",
+      "Name": "{snapshot_name}",
       "Replicated": {json.dumps(prune_snapshot_replicated)},
       "Date": "{date_json}"
     }}
@@ -252,3 +252,69 @@ def pruning_json(state, prune_last_error, prune_attempt_json):
 @pytest.fixture
 def pruning_dict(pruning_json):
     return json.loads(pruning_json)
+
+
+@pytest.fixture
+def snapshot_snapshot_state():
+    return 4
+
+
+@pytest.fixture
+def had_error():
+    return False
+
+
+@pytest.fixture
+def hooks():
+    return "1 Ok 296ms snapshot"
+
+
+@pytest.fixture
+def snapshot_snapshot_json(
+    fs_name,
+    snapshot_snapshot_state,
+    snapshot_name,
+    date_json,
+    offset_date_json,
+    had_error,
+    hooks,
+):
+    return f"""
+    {{
+      "Path": "{fs_name}",
+      "State": {snapshot_snapshot_state},
+      "SnapName": "{snapshot_name}",
+      "StartAt": "{date_json}",
+      "DoneAt": "{offset_date_json}",
+      "HooksHadError": {json.dumps(had_error)},
+      "Hooks": "{hooks}"
+    }}
+    """
+
+
+@pytest.fixture
+def snapshot_snapshot_dict(snapshot_snapshot_json):
+    return json.loads(snapshot_snapshot_json)
+
+
+@pytest.fixture
+def snapshotting_error():
+    return ""
+
+
+@pytest.fixture
+def snapshotting_json(
+    snapshot_snapshot_state, date_json, snapshotting_error, snapshot_snapshot_json
+):
+    return f"""
+    {{
+      "State": {snapshot_snapshot_state},
+      "SleepUntil": "{date_json}",
+      "Error": "{snapshotting_error}",
+      "Progress": [{snapshot_snapshot_json}]
+    }}
+    """
+
+@pytest.fixture
+def snapshotting_dict(snapshotting_json):
+    return json.loads(snapshotting_json)
