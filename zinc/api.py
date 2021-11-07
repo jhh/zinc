@@ -11,7 +11,7 @@ def status():
     zrepl = os.environ["ZREPL"]
     try:
         out = subprocess.run(
-            ["sudo", zrepl, "status", "--mode=raw"],
+            ["/run/wrappers/bin/sudo", zrepl, "status", "--mode=raw"],
             check=True,
             capture_output=True,
             text=True,
