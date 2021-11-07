@@ -28,7 +28,8 @@ class Job:
 
         if "snap" == job_type:
             snap = job["snap"]
-            return SnapJob(name=name,
+            return SnapJob(
+                name=name,
                 pruning=Pruning.from_dict(snap["Pruning"]),
                 snapshotting=SnapShotting.from_dict(snap["Snapshotting"]),
             )
