@@ -1,0 +1,95 @@
+{
+  "Jobs": {
+    "_control": {
+      "internal": null,
+      "type": "internal"
+    },
+    "_prometheus": {
+      "internal": null,
+      "type": "internal"
+    },
+    "backups": {
+      "push": {
+        "Replication": null,
+        "PruningSender": null,
+        "PruningReceiver": null,
+        "Snapshotting": {
+          "State": 1,
+          "SleepUntil": "2021-11-07T08:03:56-05:00",
+          "Error": "",
+          "Progress": []
+        }
+      },
+      "type": "push"
+    }
+  },
+  "Global": {
+    "ZFSCmds": {
+      "Active": null
+    },
+    "Envconst": {
+      "Entries": [
+        {
+          "Var": "ZREPL_ZFS_RESUME_RECV_POOL_SUPPORT_RECHECK_TIMEOUT",
+          "Value": "30s",
+          "ValueGoType": "time.Duration"
+        },
+        {
+          "Var": "ZREPL_ZFS_SEND_STDERR_MAX_CAPTURE_SIZE",
+          "Value": "32768",
+          "ValueGoType": "int"
+        },
+        {
+          "Var": "ZREPL_ENDPOINT_LIST_ABSTRACTIONS_QUERY_CREATETXG_RANGE_BOUND_ALLOW_0",
+          "Value": "false",
+          "ValueGoType": "bool"
+        },
+        {
+          "Var": "ZREPL_SNAPPER_SYNCUP_WARN_MIN_DURATION",
+          "Value": "1s",
+          "ValueGoType": "time.Duration"
+        },
+        {
+          "Var": "ZREPL_ZFS_MAX_HOLD_TAG_LEN",
+          "Value": "255",
+          "ValueGoType": "int"
+        },
+        {
+          "Var": "ZREPL_ACTIVITY_TRACE",
+          "Value": "",
+          "ValueGoType": "string"
+        },
+        {
+          "Var": "ZREPL_TRACE_DEBUG_ENABLED",
+          "Value": "false",
+          "ValueGoType": "bool"
+        },
+        {
+          "Var": "ZREPL_TRACE_ID_NUM_BYTES",
+          "Value": "3",
+          "ValueGoType": "int"
+        },
+        {
+          "Var": "ZREPL_PRUNER_RETRY_INTERVAL",
+          "Value": "10s",
+          "ValueGoType": "time.Duration"
+        },
+        {
+          "Var": "ZREPL_REPLICATION_MAX_ATTEMPTS",
+          "Value": "3",
+          "ValueGoType": "int"
+        },
+        {
+          "Var": "ZREPL_REPLICATION_RECONNECT_HARD_FAIL_TIMEOUT",
+          "Value": "10m0s",
+          "ValueGoType": "time.Duration"
+        },
+        {
+          "Var": "ZREPL_DAEMON_AUTOSTART_PPROF_SERVER",
+          "Value": "",
+          "ValueGoType": "string"
+        }
+      ]
+    }
+  }
+}
