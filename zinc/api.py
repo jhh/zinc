@@ -19,4 +19,4 @@ def status():
         return Response(out.stdout, mimetype="application/json")
     except subprocess.CalledProcessError as err:
         print(f"stdout={err.stdout}\nstderr={err.stderr}")
-        return None
+        return "err", 500
