@@ -10,6 +10,6 @@ bp = Blueprint("api", __name__, url_prefix="/api")
 def status():
     zrepl = os.environ["ZREPL"]
     out = subprocess.run(
-        [zrepl, "status", "--mode=raw"], capture_output=True, text=True
+        ["sudo", zrepl, "status", "--mode=raw"], capture_output=True, text=True
     )
     return Response(out.stdout, mimetype="application/json")
