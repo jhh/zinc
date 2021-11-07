@@ -9,9 +9,10 @@ bp = Blueprint("api", __name__, url_prefix="/api")
 @bp.route("/status")
 def status():
     zrepl = os.environ["ZREPL"]
+    sudo = os.environ["SUDO"]
     try:
         out = subprocess.run(
-            ["/run/wrappers/bin/sudo", zrepl, "status", "--mode=raw"],
+            [sudo, zrepl, "status", "--mode=raw"],
             check=True,
             capture_output=True,
             text=True,
